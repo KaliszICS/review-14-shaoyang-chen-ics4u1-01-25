@@ -3,15 +3,31 @@ public class PracticeProblem {
 
 	}
 	public static int calculate(int a, int b, char c){
-        return switch (c) {
-            case '+' -> a + b;
-            case '-' -> a - b;
-            case '*' -> a * b;
-            case '/' -> a / b;
-            case '%' -> a % b;
-            case '^' -> (int)Math.pow(a, b);
-            default -> -1;
-        };
+        int result;
+        switch (c) {
+            case '+':
+                result = a + b;
+                break;
+            case '-':
+                result = a - b;
+                break;
+            case '*':
+                result = a * b;
+                break;
+            case '/':
+                result = a / b;
+                break;
+            case '%':
+                result = a % b;
+                break;
+            case '^':
+                result = (int) Math.pow(a, b);
+                break;
+            default:
+                result = -1;
+                break;
+        }
+        return result;
     }
     final static int MAXIMUM = 10;
     public static boolean totalWordsChecker(String words){
