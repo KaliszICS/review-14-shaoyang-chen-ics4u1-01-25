@@ -36,15 +36,17 @@ public class PracticeProblem {
     }
     public static String minStrings(String str1, String str2, String str3){
         String temp1 = str1.toLowerCase();
-        String temp2 = str2.toLowerCase();
-        String temp3 = str3.toLowerCase();
-        if (temp1.compareTo(temp2) <= 0 && temp1.compareTo(temp3) <= 0) {
-            return str1;
-        } else if (temp2.compareTo(temp3) <= 0) {
-            return str2;
-        } else {
-            return str3;
-        }
+    String temp2 = str2.toLowerCase();
+    String temp3 = str3.toLowerCase();
+    
+   
+    if (temp1.compareTo(temp2) <= 0 && temp1.compareTo(temp3) <= 0) {
+        return str1;
+    } else if (temp2.compareTo(temp1) <= 0 && temp2.compareTo(temp3) <= 0) {
+        return str2;
+    } else {
+        return str3;
+    }
     }
 
 }
