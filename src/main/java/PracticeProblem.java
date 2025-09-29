@@ -31,10 +31,13 @@ public class PracticeProblem {
     }
     final static int MAXIMUM = 10;
     public static boolean totalWordsChecker(String words){
-        String[] wordsArray = words.split(" ");
+        if (words == null || words.trim().isEmpty()) {
+            return 0 <= MAXIMUM;
+        }
+        String[] wordsArray = words.trim().split("\\s+");
         return wordsArray.length <= MAXIMUM;
     }
-    public static String minStrings(String str1, String str2, String str3){
+    public static String minString(String str1, String str2, String str3){
         String temp1 = str1.toLowerCase();
     String temp2 = str2.toLowerCase();
     String temp3 = str3.toLowerCase();
@@ -47,6 +50,9 @@ public class PracticeProblem {
     } else {
         return str3;
     }
+    }
+	public static String minStrings(String str1, String str2, String str3){
+        return minString(str1, str2, str3);
     }
 
 }
